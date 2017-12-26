@@ -17,9 +17,7 @@
             String B ="-";
             String C ="gear";
             
-            out.print(A);
-            out.print(B);
-            out.print(C);
-        %>
+            out.print("文字の連結表示："+A+B+C);
+           %>
     </body>
 </html>
