@@ -13,23 +13,13 @@
     </head>
     <body>
         <%
-        //String NAME = "A";
-        //String NUM = "A";
-
-        //for (String NUM=1; NUM<21; NUM++){
-        //int i=1;
-       // NAME =(NAME + NUM);
-        //////out.print(NAME);
         String moji = "";
-        for (int i = 1; i <= 30; i++) {
-        //A = (A +i);
+        for (int i=1; i<= 30; i++) {
+            moji = moji +"A";
+            out.print(i +"回目" +moji +"<br>");
+        }
         
-        //文字連結
-        moji=moji+"A";
-        
-        out.print(i +"回"+moji+"<br>");
-        } 
-        out.print(moji);
+        out.print("最終結果は"+moji);
         %>
     </body>
 </html>
