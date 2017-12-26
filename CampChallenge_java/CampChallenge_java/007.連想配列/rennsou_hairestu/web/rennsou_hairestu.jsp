@@ -13,7 +13,6 @@
     </head>
     <%@ page import="java.util.HashMap" %>
         <%
-        String[] youso =new String[]{"10","100","soeda","hayashi","-20","118","END"};
         HashMap<String, String> data =new HashMap<String, String>();
         
         data.put("1","AAA");
@@ -21,10 +20,10 @@
         data.put("soeda","33");
         data.put("20","20");
         
-        
-        out.println("1に"     + data.get("1"));
-        out.println("<br>helloに" + data.get("hello"));
-        out.println("<br>soedaに" + data.get("soeda"));
-        out.println("<br>20に"    + data.get("20"));
+        out.print("要素数"+data.size());
+        out.print("<br>1に"         + data.get("1"));
+        out.print("<br>helloに" + data.get("hello"));
+        out.print("<br>soedaに" + data.get("soeda"));
+        out.print("<br>20に"    + data.get("20"));
         %>
 </html>
