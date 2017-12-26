@@ -13,13 +13,18 @@
     </head>
     <body>
     <%
-    final int A = 10;
-    int num = 10;
+    final int T = 100;
+    int H = 10;
     
-    out.println(A + num);
-    out.println(A - num);
-    out.println(A * num);
-    out.println(A / num);
+    int PLUS =T+H;
+    int MINUS =T-H;
+    int KAKERU=T*H;
+    int WARU =T/H;
+    
+    out.println("100+10は"+ PLUS);
+    out.println("<br>100-10は"+ MINUS );
+    out.println("<br>100*10は"+ KAKERU);
+    out.println("<br>100/10は"+ WARU);
     %>
     </body>
 </html>
