@@ -14,17 +14,17 @@
     <body>
         <%
             int x =new java.util.Random().nextInt(3)+1;
+                //ランダムで1～3をxとして出力する
             
             if (x == 1) {
-                out.println("1です。");
+                out.println("値が"+x+"のため、1です!");
             }                                
             else if (x == 2) {
-                out.println("プログラミングキャンプ");
+                out.println("値が"+x+"のため、プログラミングキャンプ!");
             }                           
             else{
-               out.println("その他です。"); 
+                out.println("値が"+x+"のため、その他です!"); 
             }   
-
-            %>
+        %>
     </body>
 </html>
