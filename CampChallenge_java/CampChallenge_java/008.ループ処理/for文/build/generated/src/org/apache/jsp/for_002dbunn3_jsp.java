@@ -53,11 +53,11 @@ public final class for_002dbunn3_jsp extends org.apache.jasper.runtime.HttpJspBa
       out.write("    ");
 
         int total = 0;
-        for (int i= 1; i<= 100;i++) {
+        for (int i=1; i<=100; i++) {
         total = total + i;
         }
 
-        out.print(total);
+        out.print("0～100の合計は"+total);
     
       out.write("\n");
       out.write("</html>\n");
