@@ -13,9 +13,11 @@
     </head>
     <body>
     <%
-    String PR ="私の名前は髙橋です。<br>関東に住んでいます。";
-    
-        out.print(PR);
+    String NAME ="名前：髙橋<br>";
+    String ADDRESS ="住所：埼玉<br>";
+        
+        out.print(NAME);
+        out.print(ADDRESS);
     %>
     </body>
 </html>
