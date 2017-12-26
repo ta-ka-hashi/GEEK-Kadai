@@ -12,6 +12,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <%= "Hello World." %>
+        <%= "Hello world." %>
     </body>
 </html>
