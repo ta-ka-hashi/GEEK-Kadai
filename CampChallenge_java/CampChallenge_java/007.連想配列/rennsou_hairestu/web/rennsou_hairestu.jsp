@@ -1,6 +1,6 @@
 <%-- 
-    Document   : Renso-Hairetsu
-    Created on : 2017/12/25, 14:27:17
+    Document   : rennsou_hairestu
+    Created on : 2017/12/26, 15:22:52
     Author     : takahashi
 --%>
 
@@ -11,8 +11,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     </head>
-    <body>
-        <%@ page import="java.util.HashMap" %>
+    <%@ page import="java.util.HashMap" %>
         <%
         String[] youso =new String[]{"10","100","soeda","hayashi","-20","118","END"};
         HashMap<String, String> data =new HashMap<String, String>();
@@ -28,5 +27,4 @@
         out.println("<br>soedaに" + data.get("soeda"));
         out.println("<br>20に"    + data.get("20"));
         %>
-    </body>
 </html>
