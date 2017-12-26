@@ -13,9 +13,11 @@
     </head>
     <body>
         <%
-        for (int i=0; i<21; i++){
-            out.print(i*8*8);
-            out.println("<br>");
+        long num =1;
+ 
+        for (int i=1; i<=20; i++){
+            num = num*8;
+            out.print("<br>8の"+i+"乗は"+num);
         }
         %>
     </body>
