@@ -52,15 +52,17 @@ public final class while_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    </head>\n");
       out.write("    ");
 
-
     // 1000を2で割り、100以下になるまで繰り返す
+    
     double i = 1000;
     out.print("初期値は"+i+"<br><br>");
+    
     while(i <100 == false) {
-    i= i /2;
-    out.print("現在の値は"+i+"<br>");
+        i= i /2;
+        out.print("現在値は"+i+"<br>");
     }
-    out.print("現在の値は"+i+"　　※100以下なので停止");
+    
+    out.print("値が100より小さいので"+i+"で停止");
     
       out.write("\n");
       out.write("</html>\n");
