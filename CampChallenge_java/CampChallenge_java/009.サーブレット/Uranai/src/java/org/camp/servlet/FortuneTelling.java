@@ -46,7 +46,7 @@ public class FortuneTelling extends HttpServlet {
             out.println("<head>");
             out.println("<title>Servlet TestServlet</title>");            
             out.println("</head>");
-            out.println("<h1>あなたの運勢は " + luckList[index] + "です</h1>");
+            out.println("<h1>あなたの運勢は " + luckList[index] + "です。</h1>");
             //out.println("<h1>Servlet TestServlet at " + request.getContextPath() + "</h1>");
             out.println("</html>");
           
