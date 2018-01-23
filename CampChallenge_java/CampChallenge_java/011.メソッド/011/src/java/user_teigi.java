@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.camp.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -13,19 +12,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import java.util.Random;
-
-import java.util.Date;
-import java.util.Random;
-import javax.servlet.RequestDispatcher;
-import org.camp.servlet.ResultData;
-
 /**
  *
  * @author takahashi
  */
-@WebServlet(name = "FortuneTelling", urlPatterns = {"/FortuneTelling"})
-public class FortuneTelling extends HttpServlet {
+@WebServlet(urlPatterns = {"/user_teigi"})
+public class user_teigi extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,40 +28,23 @@ public class FortuneTelling extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");//文字コード
-        try (PrintWriter out = response.getWriter()) {     //クラス生成
-            
-            String luckList[] = {"大吉", "中吉", "吉", "半吉", "末小吉", "凶", "小凶", "半凶", "末凶", "凶", "大凶"};//今回追加
-            Random rand = new Random();
-            //乱数所得
-            Integer index = rand.nextInt(luckList.length);
-            
-            ResultData data = new ResultData();
-            data.setD(new Date());
-            data.setLuck(luckList[index]);
-            request.setAttribute("DATA",data);
-            
-            final String result = "/WEB-INF/FortuneTellingResult.jsp";
+    
+    void myprofile(PrintWriter pw) {
+    pw.print("私の名前は林です<br>");
+    pw.print("好きな音楽はジャズ<br>");
+    pw.print("趣味はゲームと旅行です<br>");
+}
+    
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        PrintWriter out = response.getWriter();
+        /*try (PrintWriter out = response.getWriter()) {
 
-            RequestDispatcher rd = request.getRequestDispatcher(result);
-            rd.forward(request , response);
-            
-                       
-            /* TODO output your page here. You may use following sample code. */
-/*            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet TestServlet</title>");            
-            out.println("<meta http-equiv=\"contentType\" content=\"text/html: charset=UTF-8\">");
-            out.println("</head>");
-            out.println("<h1>あなたの運勢は " + luckList[index] + "です。</h1>");
-            //out.println("<h1>Servlet TestServlet at " + request.getContextPath() + "</h1>");
-            out.println("</html>");*/
-          
-        }
-    }
+    // ユーザー定義関数の呼び出し
+        myprofile(out);
+        } catch (Exception e) {
+            System.out.print(e.getMessage());
+        }*/
+}
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
@@ -109,4 +84,5 @@ public class FortuneTelling extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+
 }
