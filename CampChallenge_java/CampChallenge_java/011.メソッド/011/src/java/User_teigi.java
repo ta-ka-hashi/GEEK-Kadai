@@ -16,8 +16,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author takahashi
  */
-@WebServlet(urlPatterns = {"/user_teigi"})
-public class user_teigi extends HttpServlet {
+@WebServlet(urlPatterns = {"/User_teigi"})
+public class User_teigi extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -30,21 +30,24 @@ public class user_teigi extends HttpServlet {
      */
     
     void myprofile(PrintWriter pw) {
-    pw.print("私の名前は林です<br>");
-    pw.print("好きな音楽はジャズ<br>");
-    pw.print("趣味はゲームと旅行です<br>");
+    pw.print("名前：髙橋<br>");
+    pw.print("生年月日：1120<br>");
+    pw.print("趣味は散歩です。<br><br>");
 }
     
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        PrintWriter out = response.getWriter();
-        /*try (PrintWriter out = response.getWriter()) {
-
-    // ユーザー定義関数の呼び出し
-        myprofile(out);
-        } catch (Exception e) {
-            System.out.print(e.getMessage());
-        }*/
-}
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
+                   PrintWriter out2 = response.getWriter();
+         
+            for(int i=1; i<=10; i++){
+            out.print(i+"回目の自己紹介。<br>");
+            myprofile(out2);
+            }
+        }
+    }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
