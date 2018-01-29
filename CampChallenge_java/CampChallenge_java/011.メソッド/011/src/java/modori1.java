@@ -16,8 +16,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author takahashi
  */
-@WebServlet(urlPatterns = {"/User_teigi"})
-public class User_teigi extends HttpServlet {
+@WebServlet(urlPatterns = {"/modori1"})
+public class modori1 extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -28,22 +28,29 @@ public class User_teigi extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    
-    void myprofile(PrintWriter pw) {
-    pw.print("名前：髙橋<br>");
-    pw.print("生年月日：1120<br>");
-    pw.print("趣味は散歩です。<br><br>");
-}
+
+    boolean myprofile(PrintWriter pw) {
+        pw.println("名前：髙橋<br>");
+        pw.println("生年月日：1120<br>");
+        pw.println("趣味は散歩です。<br><br>");
+        return true;  //←←ここをtrueかfalseに書き換えて確認する
+    }
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-        throws ServletException, IOException {
-            response.setContentType("text/html;charset=UTF-8");
-            try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */       
-                for(int i=1; i<=10; i++){
-                out.print(i+"回目の自己紹介。<br>");
+            throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+
+            for (int i = 1; i <= 10; i++) {
+                out.println(i + "回目の自己紹介。<br>");
                 myprofile(out);
-                }
+            }
+
+            if(myprofile(out) == true){
+                out.println("評価：この処理は正しく実行できました");
+            }else{
+                out.println("評価：正しく実行できませんでした");
+            }
         }
     }
 
