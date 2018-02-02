@@ -15,11 +15,11 @@ public class main {
         //クラスのインスタンス生成
         Human Class = new Human();
         // インスタンスのフィールドへ値設定
-        Class.birth = 40;
+        Class.number = 24;
         Class.set("髙橋", 5);
-        //hito.birth = 40;
+        Class.number = 12;
         // インスタンスのメソッドを利用
-        System.out.println("氏名　：" + Class.name);
-        System.out.println("生誕　：" + Class.birth);
+        System.out.println("氏名：" + Class.name);
+        System.out.println("№　：" + Class.number);
     }
 }
