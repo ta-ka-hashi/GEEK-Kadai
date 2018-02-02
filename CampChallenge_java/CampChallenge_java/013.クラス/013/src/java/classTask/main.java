@@ -22,4 +22,10 @@ public class main {
         System.out.println("氏名：" + Class.name);
         System.out.println("№　：" + Class.number);
     }
+    
+    public void kougi() {
+            String msg = "講師の" + this.name + "です。講義を始めます。";
+            System.out.print(msg);
+        }
+    
 }
