@@ -21,4 +21,19 @@ public class Human {
         this.name = n;
         this.number = a;
     }
+
+    public void Disp() {
+        // インスタンスのメソッドを利用
+        System.out.println("氏名：" + this.name);
+        System.out.println("№　：" + this.number);
+    }
+
+    public static void main(String[] args) {
+        //クラスのインスタンス生成
+        Human Info = new Human();
+        // インスタンスのフィールドへ値設定
+        Info.number = 2;
+        Info.set("髙橋", 5);
+        Info.Disp();
+    }
 }

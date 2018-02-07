@@ -9,12 +9,20 @@ package classTask;
  *
  * @author takahashi
  */
-//public class Keisyo {
+//public class Keisyo 
+class Clear extends Human {
 
-    class Teacher extends Human {
-
-        public void kougi() {
-            String msg = "講師の" + this.name + "です。講義を始めます。";
-            System.out.print(msg);
-        }
+    public static void main(String[] args) {
+        Clear test = new Clear();
+        test.set("髙橋", 100);
+        test.Disp();
+        test.ClearDisplay();
+        test.Disp();
     }
+
+    public void ClearDisplay() {
+      //  Clear test = new Clar();e
+        set("", 0);
+        
+    }
+}
