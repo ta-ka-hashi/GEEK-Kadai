@@ -14,15 +14,13 @@ class Clear extends Human {
 
     public static void main(String[] args) {
         Clear test = new Clear();
-        test.set("髙橋", 100);
+        test.set("髙橋", 100);//仮代入
         test.Disp();
-        test.ClearDisplay();
-        test.Disp();
+        test.Reset();//初期化実行
+        test.Disp();//初期化後の表示
     }
 
-    public void ClearDisplay() {
-      //  Clear test = new Clar();e
-        set("", 0);
-        
+    public void Reset() {
+        set("", 0);//初期化
     }
 }
