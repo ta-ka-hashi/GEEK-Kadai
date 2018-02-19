@@ -121,7 +121,7 @@ public class BlackJack {
             System.out.println("***勝者：ユーザー***");
             System.out.println("事由➡ユーザーの手札の方が強いため");
         } else {
-            System.out.println("");
+            System.out.println("　");
         }
     }
 
