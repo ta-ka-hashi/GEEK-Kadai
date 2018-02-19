@@ -103,7 +103,7 @@ public class Dealer extends Human {
             //① set から要素を一枚取り出して、一時的な変数に代入する
             Integer a = set.get(i);
 
-            //② 一時的な変数を、myCards に追加する           
+            //② 一時的な変数を、myCards に追加           
             myCards.add(a);
         }*/
         while (set.size() != 0) {
@@ -113,7 +113,6 @@ public class Dealer extends Human {
             //② 一時的な変数を、myCards に追加する           
             myCards.add(a);
         }
-
     }
 
     //自分の手が17以上になるまでカードを引かなければならず、17以上になったら、その後は追加のカードを引くことはできない

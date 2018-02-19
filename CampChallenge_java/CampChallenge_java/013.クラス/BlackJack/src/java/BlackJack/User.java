@@ -24,7 +24,7 @@ class User extends Human {
 
     public void setCard(ArrayList<Integer> set) {
         while( set.size() != 0 ){
-            //① set から要素を一枚取り出して、一時的な変数に代入する
+            //① set から要素を一枚取り出して、一時的な変数に代入
             Integer a = set.remove(0);
 
             //② 一時的な変数を、myCards に追加する           

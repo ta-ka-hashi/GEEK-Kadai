@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 public abstract class Human {
 
-    //例えば「カードの２番目の数字が４だった」という場合であれば，「２」が int 型，「４」が Integer型となります。
+    //例えば「カードの２番目の数字が４だった」という場合であれば，「２」が int 型，「４」が Integer型となる
     //手札
     //UserとDealerの持つ手札情報
     //手札の一枚一枚は整数で表現
