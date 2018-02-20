@@ -35,15 +35,13 @@ public class HyoujyunClass {
 
             // FileWriter作成
             FileWriter fw = new FileWriter(fp);
+            FileWriter fw2 = new FileWriter(fp, true);
             // 処理開始宣言とその時刻を
             fw.write(f.format(c.getTime()) + "　開始！\r\n");       //\r\nは改行指令
             // クローズ
             fw.close();
 
-            // FileWriter作成 -- 追記モード
-            FileWriter fw2 = new FileWriter(fp, true);
             // 書き込み
-
             if (c.get(Calendar.SECOND) == 0) {
                 for (int i = 1; 1 < 5; i++) {
                     fw.write("０\r\n");

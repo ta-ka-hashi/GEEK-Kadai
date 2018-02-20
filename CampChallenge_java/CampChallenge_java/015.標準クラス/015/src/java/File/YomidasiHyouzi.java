@@ -25,8 +25,14 @@ public class YomidasiHyouzi {
             FileReader fr = new FileReader(fp);
             // BufferedReader作成
             BufferedReader br = new BufferedReader(fr);
-            // 1行読み出し
-            System.out.print(br.readLine());
+            // 1行読み出し、1行につき1行の書き出し指令
+            /*System.out.println(br.readLine());
+            System.out.println(br.readLine());*/
+
+            String str;
+            while ((str=br.readLine()) != null) { //「読み込んだ文字列がnullでない間は」
+                System.out.println(str);
+            }
 
             br.close();
 
