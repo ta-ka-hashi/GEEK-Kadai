@@ -23,10 +23,14 @@ public class KkidasiHozon {
 
             // FileWriter作成
             FileWriter fw = new FileWriter(fp);
+            FileWriter fw2 = new FileWriter(fp, true);
             // 自己紹介書き込み
-            fw.write("俺の名前は！");
+            fw.write("俺の名前は！\r\n");
+            fw2.write("T.");
+            fw2.write("T\r\n");
             // クローズ
             fw.close();
+            fw2.close();
 
         } catch (IOException e) {
             e.printStackTrace();
