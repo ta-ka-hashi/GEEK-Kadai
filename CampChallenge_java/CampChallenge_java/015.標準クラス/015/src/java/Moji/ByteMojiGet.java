@@ -18,6 +18,5 @@ public class ByteMojiGet {
         System.out.println(name);
         System.out.println("文字数は" + name.length());
         System.out.println("バイト数は" + name.getBytes().length);
-
     }
 }

@@ -18,8 +18,6 @@ public class MojiIrekae {
         X = X.replace("I", "い");//余分
         X = X.replace("U", "う");//余分
         System.out.println("文字化け変換後↓");
-        System.out.println(X.replace("I", "い").replace("U","う" ));
-
+        System.out.println(X.replace("I", "い").replace("U", "う"));
     }
-
 }
