@@ -44,13 +44,15 @@ public class HyoujyunClass {
             //Mathクラスは、指数関数、対数関数、平方根、および三角関数といった基本的な数値処理を実行するためのメソッドを含んでる
             //Mathクラスのメソッドはすべてstaticメソッドなので、new文でインスタンスを生成すること無しに使用できます
             double a = Math.sqrt(2);// aには2の平方根の値が入ります
-            // for(int j=1;j<10;j++){
-            for(int i=1;i<100;i++){
+            //ひたすら繰り返し計算  
+            for(int j=1;j<10000;j++){
+            for(int i=1;i<1000000000;i++){
             fw2.write((a * 100000) + "\r\n");
+            }
             }
 
             // クローズ
-            fw2.write(f.format(c.getTime()) + "　終了！\r\n");
+            fw2.write(f.format(c.getTime()) + "　終了！\r\n");      //**********この処理では結果的に1秒も経過しな
             fw.close();
             fw2.close();
             
