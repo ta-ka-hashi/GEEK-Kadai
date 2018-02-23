@@ -91,6 +91,9 @@ public class Dealer extends Human {
     }
 
     public void setCard(ArrayList<Integer> set) {
+        
+        //パターンA
+        
         // .size() : ArrayList の要素数を戻り値とする
         // set.size() : 「set」という変数名のArrayListの要素数を戻り値とする
         // ^^^引札（１枚のときと、２枚のときとがある）
@@ -106,6 +109,9 @@ public class Dealer extends Human {
             //② 一時的な変数を、myCards に追加           
             myCards.add(a);
         }*/
+        
+        //パターンB
+        
         while (set.size() != 0) {
             //① set から要素を一枚取り出して、一時的な変数に代入する
             Integer a = set.remove(0);

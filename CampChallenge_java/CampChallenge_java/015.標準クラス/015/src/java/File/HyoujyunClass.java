@@ -38,31 +38,36 @@ public class HyoujyunClass {
             FileWriter fw2 = new FileWriter(fp, true);
             // 処理開始宣言とその時刻を
             fw.write(f.format(c.getTime()) + "　開始！\r\n");       //\r\nは改行指令
-            // クローズ
-            fw.close();
 
             // 書き込み
-            if (c.get(Calendar.SECOND) == 0) {
-                for (int i = 1; 1 < 5; i++) {
-                    fw.write("０\r\n");
-                }
+            //Mathとは
+            //Mathクラスは、指数関数、対数関数、平方根、および三角関数といった基本的な数値処理を実行するためのメソッドを含んでる
+            //Mathクラスのメソッドはすべてstaticメソッドなので、new文でインスタンスを生成すること無しに使用できます
+            double a = Math.sqrt(2);// aには2の平方根の値が入ります
+            // for(int j=1;j<10;j++){
+            for(int i=1;i<100000;i++){
+            fw2.write((a * 1000000000) + "\r\n");
             }
 
-            // クローズおよび終了宣言
-            if (c.get(Calendar.SECOND) == 10) {
-
-                fw2.write(f.format(c.getTime()) + "　終了！\r\n");
-                fw2.close();
-            }
-
-            //ファイル読み出し
+            // クローズ
+            fw2.write(f.format(c.getTime()) + "　終了！\r\n");
+            fw.close();
+            fw2.close();
+            
+/*
             FileReader fr = new FileReader(fp);
             // BufferedReader作成
             BufferedReader br = new BufferedReader(fr);
-            // 1行読み出し
-            System.out.print(br.readLine());
+            // 1行読み出し、1行につき1行の書き出し指令
+            System.out.println(br.readLine());
+            System.out.println(br.readLine());
 
-            br.close();
+            String str;
+            while ((str = br.readLine()) != null) { //「読み込んだ文字列がnullでない間は」
+                System.out.println(str);
+            }
+
+            br.close();*/
 
         } catch (IOException e) {
             e.printStackTrace();

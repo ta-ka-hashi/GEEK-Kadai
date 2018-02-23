@@ -19,7 +19,7 @@ public class KkidasiHozon {
 
         try {
             // ファイルオープン
-            File fp = new File("自己紹介の記述されたテキストファイル.txt");
+            File fp = new File("mypr.txt");
 
             // FileWriter作成
             FileWriter fw = new FileWriter(fp);
