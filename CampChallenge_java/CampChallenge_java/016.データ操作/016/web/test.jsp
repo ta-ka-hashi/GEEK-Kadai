@@ -12,21 +12,23 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
         <%
 // 受け取るパラメータの文字コード
             request.setCharacterEncoding("UTF-8");
 // テキストボックスの情報
+            out.print("名前：");
             out.print(request.getParameter("txtName"));
 // チェックボックスの情報
             //out.print(request.getParameter("chkTest"));
 // ラジオボタンの情報
+            out.print("<br>性別：");
             out.print(request.getParameter("rdoSample"));
 // ボタンの情報
-          //  out.print(request.getParameter("btnTest"));
+            //  out.print(request.getParameter("btnTest"));
 // コンボボックス（select）の情報
             //out.print(request.getParameter("cmbList"));
 // テキストエリアの情報
+            out.print("<br>ご趣味は：");
             out.print(request.getParameter("mulText"));
         %>
 
