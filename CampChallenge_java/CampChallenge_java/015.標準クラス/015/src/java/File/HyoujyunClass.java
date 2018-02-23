@@ -45,8 +45,8 @@ public class HyoujyunClass {
             //Mathクラスのメソッドはすべてstaticメソッドなので、new文でインスタンスを生成すること無しに使用できます
             double a = Math.sqrt(2);// aには2の平方根の値が入ります
             // for(int j=1;j<10;j++){
-            for(int i=1;i<100000;i++){
-            fw2.write((a * 1000000000) + "\r\n");
+            for(int i=1;i<100;i++){
+            fw2.write((a * 100000) + "\r\n");
             }
 
             // クローズ
