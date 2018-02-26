@@ -15,15 +15,42 @@ and open the template in the editor.
             <!-- formタグで括られた入力項目はこれら -->
             名前    <br>
             <input type="text" name="txtName">  <br>
-            <br>
-            性別　<input type="radio" name="rdoSample" value="男">男性
-            <input type="radio" name="rdoSample" value="女">女性    <br>
-            <br>
-            ご趣味は    <br>
-            <textarea name="mulText"></textarea>    <br>
-            <br>
-            　　　　<input type="submit" name="btnSubmit">
-        </form>
+            <p>性別：
+                <select name="rdo">
+                    <option value=null>---</option>
+                    <option value="男">男</option>
+                    <option value="女">女</option>
+                    <option value="　">　</option>
+                </select></p>                          
 
+            <p>血液型：    <br>
+                <select name="blood">
+                    <option value=null>---</option>
+                    <option value="A">A型</option>
+                    <option value="O">O型</option>
+                    <option value="その他">その他</option>
+                </select></p>       
+
+            ご趣味は <br> 
+            <textarea name="mulText"></textarea>
+            <br><br>
+            <input type="submit" value="送信" name="btnSubmit">　　<input type="reset" value="リセット">
+            <br> <br>
+
+            <address>
+                このホームページに関するお問合せは<br>
+                ホームページ：<a href="https://www.google.co.jp/?gfe_rd=cr&dcr=0&ei=f5iPWorAF6rEXsm3v8AC" >https://www.google.co.jp/?gfe_rd=cr&dcr=0&ei=f5iPWorAF6rEXsm3v8AC</a><br>
+                Eメール：<a href="mailto:kari@gmail.com">kari@gmail.com</a><br>
+                住所：〒331-7895　宮城県名取市<br>
+                ＴＥＬ：xxx-xxxx-0519<br>
+            </address>
+
+            <table border="1" width="500" cellspacing="0" cellpadding="5">
+                <tr>
+                    <th bgcolor="#EE000001"><font color="#FFFFFF">以上</font></th>
+                </tr>
+            </table>
+
+        </form>
     </body>
 </html>

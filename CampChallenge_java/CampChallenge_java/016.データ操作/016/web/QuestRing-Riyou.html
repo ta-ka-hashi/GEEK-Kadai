@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <form action="./Quest.jsp" method="get">
+            <!-- formタグで括られた入力項目はこれら -->
+
+            <!--
+            <form oninput="total1.value = type1.valueAsNumber * count1.valueAsNumber">
+                <input type="number" name="type1" value="0" size="10"> <br>
+
+                <input type="number" name="count1" value="0" size="10"> <br>
+                <output name="total1">計算結果</output>
+            </form>
+
+            <form oninput="document.getElementById('total1').value =
+                  parseInt(document.getElementById('type1').value, 10) * 
+                  parseInt(document.getElementById('count1').value, 10)">
+                <input type="number" id="type1" value="0" size="10"> ＋ 
+                <input type="number" id="count1" value="0" size="10"> ＝ 
+                <output id="total1" for="type1 count1">計算結果</output>
+            </form> -->
+
+            <p>商品種別：
+                <select name="type">
+                    <option value=null>---</option>
+                    <option value=1>1.雑貨</option>
+                    <option value=2>2.生鮮食品</option>
+                    <option value=3>3.その他</option>
+                </select></p>
+
+            個数    <br>
+            <input type="text" name="count">  <br>
+
+
+            総額  <br>
+            <input name="total" value="0" >
+            <br>
+
+            <input type="submit" value="購入" name="btnSubmit">　　<input type="reset" value="リセット">
+
+        </form>
+    </body>
+</html>
