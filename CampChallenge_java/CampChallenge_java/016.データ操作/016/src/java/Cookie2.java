@@ -41,8 +41,9 @@ public class Cookie2 extends HttpServlet {
             Calendar d = Calendar.getInstance();
             SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
-            String food = "ichigo";
+            //String food = "ichigo";
             //Cookie c = new Cookie("Data", food);
+            //時刻代入
             Cookie c = new Cookie("Data", (f.format(d.getTime())));
 
             // cookieの登録
